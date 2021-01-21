@@ -19,9 +19,9 @@ start server
 node server.js
 ```
 ## How to use 
-1 - Go to URL ```localhost:8000 ```
-2 - Enter zipCode 
-3 - Click Generate Button
+1. Go to URL ```localhost:8000 ```
+2. Enter zipCode 
+3. Click Generate Button
 
 ## links
 - [github](https://github.com/AhmedElkhodary/weather-journal-app)
