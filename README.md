@@ -25,4 +25,4 @@ node server.js
 
 ## links
 - [github](https://github.com/AhmedElkhodary/weather-journal-app)
-- youtube
+- [youtube](https://youtu.be/iOHwHEz8YwE)
