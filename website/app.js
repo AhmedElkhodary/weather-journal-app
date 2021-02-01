@@ -1,5 +1,5 @@
 /* Global Variables */
-const apiKey  = ''; // put your Api key
+const apiKey  = 'da9448495ffc258151827b9f11abdb12'; // put your Api key
 // the baseUrl to get data from Api (you need to manipulate it)
 const baseURL = 'api.openweathermap.org/data/2.5/weather?zip={zip code}&appid={API key}'
 
@@ -17,8 +17,8 @@ function performAction(e){
 	let d = new Date();
 	let newDate = d.getDate() + '-' + (d.getMonth() + 1 ) + '-' + d.getFullYear();
 	
-	// Api url manipulated
-	const URL =`http://api.openweathermap.org/data/2.5/weather?zip=${newZipCode}&appid=${apiKey}`;
+	// Api url manipulated (Celsius)
+	const URL =`http://api.openweathermap.org/data/2.5/weather?zip=${newZipCode}&appid=${apiKey}&units=metric`;
 	
 	// call getApi fun
 	getApi(URL)
@@ -80,8 +80,8 @@ const updateUI = async () => {
   try{
     const allData = await request.json();
     
-    // put data to Html (and convert temp kelvin to celsius ) 
-    document.getElementById('temp').innerHTML = 'Temperature: ' +  Math.round(allData.temp - 273.15) + '°C';
+    // put data to Html 
+    document.getElementById('temp').innerHTML = 'Temperature: ' + allData.temp  + '°C';
     document.getElementById('date').innerHTML = 'Date: ' + allData.newDate;
     document.getElementById('country').innerHTML = 'Country: ' + allData.country;
     document.getElementById('content').innerHTML = allData.feel;
